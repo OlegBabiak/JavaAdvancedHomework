@@ -2,21 +2,18 @@ package HomeWork01;
 
 public class Salary {
 
-
-    public double nadbavka(double oklad, double vidsNadb) {
-        return oklad * vidsNadb;
+    public double calculateBonus(double wage, double bonusPercent) {
+        return wage * bonusPercent;
     }
 
-    public double zarplata(double oklad, double nadbavka, double premija) {
-        return oklad + nadbavka + premija;
+    public double calculateSalary(double wage, double calculateBonus, double premium) {
+        return wage + calculateBonus + premium;
     }
 
-    public double doVydachi(double zarplata, double tax) {
-        if (zarplata < tax)
-            throw new IllegalArgumentException("zarplata must be greater that tax");
+    public double calculatePayrollAfterTax(double calculateSalary, double tax) {
+        if (calculateSalary <= tax)
+            throw new IllegalArgumentException("Salary must be greater than tax");
 
-        return zarplata - tax;
+        return calculateSalary - tax;
     }
-
 }
-
