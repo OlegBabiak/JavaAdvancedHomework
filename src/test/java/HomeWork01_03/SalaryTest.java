@@ -1,4 +1,4 @@
-package HomeWork01;
+package HomeWork01_03;
 
 import org.junit.*;
 import org.junit.rules.TestWatcher;
@@ -52,15 +52,6 @@ public class SalaryTest {
         double realCalculatePayrollAfterTax = salary.calculatePayrollAfterTax
                 (14500.50, 2610.09);
         double expectedCalculatePayrollAfterTax = 11890.41;
-
-        Assert.assertEquals(expectedCalculatePayrollAfterTax, realCalculatePayrollAfterTax, 0.001);
-    }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void calculatePayrollAfterTaxWithExceptionTest() {
-        double realCalculatePayrollAfterTax = salary.calculatePayrollAfterTax
-                (14500.50, 14500.50);
-        double expectedCalculatePayrollAfterTax = 0.00;
 
         Assert.assertEquals(expectedCalculatePayrollAfterTax, realCalculatePayrollAfterTax, 0.001);
     }
